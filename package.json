@@ -30,8 +30,6 @@
     "react-redux": "7.2.3",
     "redux": "4.0.5"
   },
-
-
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
