@@ -3,9 +3,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import City from './city';
-// import { setCities } from '../actions/index';
+import { setCities } from '../actions/index';
 // this works too:
-import { setCities } from '../actions';
+// import { setCities } from '../actions';
 
 function CityList(props) {
   // useEffect() gets called when CityList gets rendered
@@ -29,7 +29,6 @@ function CityList(props) {
       )
     );
   };
-  // setActiveCity={setActiveCity}
 
   return (
     <div className="cities">
@@ -54,3 +53,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityList);
+// export default connect(mapStateToProps)(CityList);

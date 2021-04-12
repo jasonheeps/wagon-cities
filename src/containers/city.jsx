@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import React from 'react';
 
-import { setActiveCity } from '../actions';
+import { setActiveCity } from '../actions/index';
 
 function City(props) {
   const { city } = props.city;
@@ -11,12 +11,11 @@ function City(props) {
   // clicking on a city makes it the activeCity
   const handleClick = () => {
     if (activeCity !== city) {
-      setActiveCity(city);
+      props.setActiveCity(city);
     }
   };
 
   const className = `city${activeCity === city ? '' : ' active-city'}`;
-
   return (
     <div className={className} onClick={handleClick}>
       <h3>{ city.name }</h3>
