@@ -2,6 +2,7 @@
 import cities from '../../data/cities';
 
 export function setCities() {
+  console.log('setCities() action called!');
   return {
     type: 'SET_CITIES',
     payload: cities

@@ -1,12 +1,13 @@
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import React from 'react';
 
 import { setActiveCity } from '../actions/index';
 
 function City(props) {
-  const { city } = props.city;
-  const activeCity = props.activeCity;
+  const { activeCity, city } = props;
+  // why can't I write
+  // const { setActiveCity } = props;?
 
   // clicking on a city makes it the activeCity
   const handleClick = () => {

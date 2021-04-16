@@ -15,6 +15,7 @@ function CityList(props) {
     // why can't I just use 'setCities()' from the import?
     // (I guess because the import itself isn't properly wired with the reducer?)
     // Why do I need this? I thought I already have 'this.props.cities' thanks to mapStateToProps()
+    // console.log('useEffect() in CityList called!!!');
     props.setCities();
   });
 
